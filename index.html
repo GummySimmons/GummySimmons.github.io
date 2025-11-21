@@ -3,10 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jack Home Solutions</title>
+    <title>Jack Home Solutions | Construction & Renovation</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <img src="images/JACK%20HOME%20SOLUTIONS.svg" alt="Logo"/>
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">
+                <img src="images/logo.svg" alt="Jack Home Solutions Logo">
+                <span>Jack Home Solutions</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Building Trust, One Home at a Time</h1>
+            <p>Professional construction and renovation services in Orange County, FL.</p>
+            <a href="tel:4079218421" class="btn">Call 407-921-8421</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Who We Are</h2>
+            <div class="about-content">
+                <p>Jack Home Solutions is an independent contractor business with over 30 years of experience. We are fully insured and dedicated to providing high-quality craftsmanship for every project, big or small.</p>
+                <p>Whether you need a quick repair or a major renovation, we treat your home with the respect it deserves. We pride ourselves on clear communication and reliability.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Carpentry</h3>
+                    <p>From custom framing to intricate woodwork, we handle all your carpentry needs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fencing</h3>
+                    <p>Secure and beautify your property with our professional fence installation and repair services.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Interior Renovations</h3>
+                    <p>Update your kitchen, bathroom, or living areas with our renovation expertise.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Plumbing Repairs</h3>
+                    <p>Reliable plumbing repairs and fixture installations to keep your home running smoothly.</p>
+                </div>
+            </div>
+            <p class="subcontract-note">We also coordinate HVAC and electrical work for larger projects, ensuring a seamless experience for you.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Recent Projects</h2>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <img src="images/deck_pt1.jpg" alt="Deck Construction Phase 1">
+                </div>
+                <div class="project-item">
+                    <img src="images/deck_pt2.jpg" alt="Deck Construction Phase 2">
+                </div>
+                <div class="project-item">
+                    <img src="images/deck_completed.jpg" alt="Completed Deck Project">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-accent">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>We prefer to schedule consultations over the phone, but feel free to email us directly.
+                        Calls are usually returned the same business day.</p>
+                    
+                    <div class="info-item">
+                        <span class="info-label">Phone:</span>
+                        <span class="copy-on-click">407-921-8421</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Email:</span>
+                        <span class="copy-on-click">contact@jackhomesolutions.com</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Area:</span>
+                        <span>Orange County, FL <span class="zip">32824</span></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Hours:</span>
+                        <span>Monday – Saturday (Closed Sunday)</span>
+                    </div>
+                    <div class="text-center" style="margin-top: 30px;">
+                        <a href="tel:4079218421" class="btn">Call Us<br /><span style="font-size: 0.8rem;">407-921-8421</span></a>
+                        <a href="mailto:contact@jackhomesolutions.com" class="btn">Email Us<br /><span style="font-size: 0.6rem;">Phone Preferred</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Jack Home Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const copyButtons = document.querySelectorAll('.copy-on-click');
+        copyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const textToCopy = button.textContent.trim();
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    button.classList.add('copied');
+                    setTimeout(() => {
+                        button.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
